@@ -5,7 +5,6 @@ const validator = require("../validator/validator");
 //POST /functionup/colleges
 const createCollege = async function(req, res) {
     try {
-        res.setHeader('Access-Control-Allow-Origin','*');
         let data = req.body;
         if (!validator.isValidRequestBody(data)) {
             return res
@@ -79,7 +78,6 @@ const createCollege = async function(req, res) {
 //GET/functionup/collegeDetails
 const getCollegeDetails = async function(req, res) {
     try {
-        res.setHeader('Access-Control-Allow-Origin','*');
         let body = req.query;
         if (!validator.isValidRequestBody(body)){
             return res.status(400).send({
