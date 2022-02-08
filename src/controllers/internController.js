@@ -5,7 +5,6 @@ const validator = require("../validator/validator");
 //POST/functionup/interns
 const createIntern = async function (req, res) {
   try {
-    res.setHeader('Access-Control-Allow-Origin','*');
     let data = req.body;
     if (!validator.isValidRequestBody(data)) {
       //validating whether data is given in request body or not
